@@ -5,76 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3947f227-bcdb-4c20-bd67-e5d479f40b9a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CSC-340-group6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travelbuddy/dist/Profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assignment03/src/RestApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment03/src/RestApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/Prototype.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/Software Requirements Specification Document V1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/MainPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/Profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/ProviderMain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/Sign-Up.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/assets/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/assets/img/36-best-vacation-spots-in-the-world-trending-now.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/assets/img/Perfect-Dayv2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/assets/img/bg-masthead.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/assets/img/bg-signup.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/assets/img/demo-image-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/assets/img/demo-image-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/assets/img/rsz_shutterstock_1869263059_1-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/assets/js/color-modes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/css/StyleTest.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/css/sidebars.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/js/scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/dist/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/scripts/build-assets.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/scripts/build-pug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/scripts/build-scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/scripts/build-scss.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/scripts/clean.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/scripts/render-assets.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/scripts/render-pug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/scripts/render-scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/scripts/render-scss.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/scripts/sb-watch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/scripts/start-debug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/scripts/start.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/assets/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/assets/img/bg-masthead.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/assets/img/bg-signup.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/assets/img/demo-image-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/assets/img/demo-image-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/assets/img/ipad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/js/scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/pug/index.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/_global.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/components/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/components/_navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/sections/_about.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/sections/_contact.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/sections/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/sections/_masthead.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/sections/_projects.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/sections/_signup.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/styles.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/variables/_colors.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC-340-group6-main/travelbuddy/src/scss/variables/_typography.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Prototype/src/Home.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Prototype/src/Login.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Prototype/src/Profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Prototype/src/Profile.html" afterDir="false" />
@@ -98,7 +31,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
@@ -140,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716444096668</updated>
-      <workItem from="1716444097728" duration="1463000" />
+      <workItem from="1716444097728" duration="1833000" />
     </task>
     <servers />
   </component>
