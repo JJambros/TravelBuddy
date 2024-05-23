@@ -1,5 +1,5 @@
 body {
-    background-image: url('../src/bg-signup.jpg');
+    background-image: url('../assets/img/bg-signup.jpg');
     background-size: cover; /* Ensure the background image covers the entire area */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
