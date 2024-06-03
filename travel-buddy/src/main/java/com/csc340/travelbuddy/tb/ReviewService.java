@@ -17,4 +17,10 @@ public class ReviewService {
     public List<Review> getAllReviews() {
         return reviewRepository.findAll();
     }
+
+    public List<Review> getReviewsByTripId(Long tripId) {
+        return reviewRepository.findAll().stream()
+                .filter(review -> review.getTrip().getId().equals(tripId))
+                .toList();
+    }
 }

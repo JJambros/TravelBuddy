@@ -23,8 +23,6 @@ public class ReviewController {
 
     @GetMapping("/trip/{tripId}")
     public List<Review> getReviewsByTripId(@PathVariable Long tripId) {
-        return reviewService.getAllReviews().stream()
-                .filter(review -> review.getTrip().getId().equals(tripId))
-                .toList();
+        return reviewService.getReviewsByTripId(tripId);
     }
 }
