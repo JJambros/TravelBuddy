@@ -1,18 +1,39 @@
 package com.csc340.travelbuddy.tb;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/api/customers")
 public class CustomerController {
-
     @Autowired
-    CustomerService customerService;
+    private CustomerService customerService;
 
-    @GetMapping("/home")
-    public String home() {
-        return "index";
+    @PostMapping
+    public Customer createCustomer(@RequestBody Customer customer) {
+        return customerService.createCustomer(customer);
+    }
+
+    @GetMapping
+    public List<Customer> getAllCustomers() {
+        return customerService.getAllCustomers();
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Customer> getCustomerById(@PathVariable Long id) {
+        return customerService.getCustomerById(id);
+    }
+
+    @PutMapping("/{id}")
+    public Customer updateCustomer(@PathVariable Long id, @RequestBody Customer customerDetails) {
+        return customerService.updateCustomer(id, customerDetails);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteCustomer(@PathVariable Long id) {
+        customerService.deleteCustomer(id);
     }
 }
