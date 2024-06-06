@@ -1,39 +1,66 @@
 package com.csc340.travelbuddy.tb;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 
-@RestController
-@RequestMapping("/api/customers")
+@Controller
+@RequestMapping("/customers")
 public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @PostMapping
-    public Customer createCustomer(@RequestBody Customer customer) {
-        return customerService.createCustomer(customer);
+    @GetMapping("/signup")
+    public String showSignupForm(Model model) {
+        model.addAttribute("customer", new Customer());
+        return "signup";
     }
 
-    @GetMapping
-    public List<Customer> getAllCustomers() {
-        return customerService.getAllCustomers();
+    @PostMapping("/signup")
+    public String createCustomer(@ModelAttribute Customer customer, Model model) {
+        Customer savedCustomer = customerService.createCustomer(customer);
+        model.addAttribute("customer", savedCustomer);
+        return "redirect:/customers/main?id=" + savedCustomer.getId();
     }
 
-    @GetMapping("/{id}")
-    public Optional<Customer> getCustomerById(@PathVariable Long id) {
-        return customerService.getCustomerById(id);
+    @GetMapping("/main")
+    public String showMainPage(@RequestParam Long id, Model model) {
+        Optional<Customer> customer = customerService.getCustomerById(id);
+        if (customer.isPresent()) {
+            model.addAttribute("customer", customer.get());
+            return "MainPage";
+        }
+        return "redirect:/customers/signup";
     }
 
-    @PutMapping("/{id}")
-    public Customer updateCustomer(@PathVariable Long id, @RequestBody Customer customerDetails) {
-        return customerService.updateCustomer(id, customerDetails);
+    @GetMapping("/profile")
+    public String showProfile(@RequestParam Long id, Model model) {
+        Optional<Customer> customer = customerService.getCustomerById(id);
+        if (customer.isPresent()) {
+            model.addAttribute("customer", customer.get());
+            return "Profile";
+        }
+        return "redirect:/customers/main";
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteCustomer(@PathVariable Long id) {
+    @PostMapping("/profile")
+    public String updateProfile(@ModelAttribute Customer customer, Model model) {
+        try {
+            Customer updatedCustomer = customerService.updateCustomer(customer.getId(), customer);
+            model.addAttribute("customer", updatedCustomer);
+            return "Profile";
+        } catch (Exception e) {
+            model.addAttribute("error", e.getMessage());
+            return "Profile";
+        }
+    }
+
+    @GetMapping("/delete")
+    public String deleteCustomer(@RequestParam Long id) {
         customerService.deleteCustomer(id);
+        return "redirect:/customers/signup";
     }
 }

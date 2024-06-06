@@ -52,7 +52,4 @@ public class Trip {
         this.price = price;
     }
 
-    public void setReviews(List<Review> reviews) {
-        this.reviews = reviews;
-    }
 }
