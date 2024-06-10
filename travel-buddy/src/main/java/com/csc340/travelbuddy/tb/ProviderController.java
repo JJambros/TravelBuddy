@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Controller
@@ -25,6 +26,25 @@ public class ProviderController {
     @GetMapping("provider/register")
     public String registerForm(){
         return "provider/ProviderSignup";
+    }
+
+    @GetMapping("provider/login")
+    public String loginForm(Model model){
+        model.addAttribute("provider", new Provider());
+        return "provider/ProviderLogin";
+    }
+
+    @PostMapping("provider/login")
+    public String loginProvider(@RequestParam String email, @RequestParam String password, Model model){
+        Optional<Provider> providerOpt = providerService.findByEmailAndPassword(email, password);
+        if (providerOpt.isPresent()) {
+            Provider provider = providerOpt.get();
+            model.addAttribute("provider", provider);
+            return "redirect:/provider/main/" + provider.getId();
+        } else {
+            model.addAttribute("error", "Invalid email or password");
+            return "provider/ProviderLogin";
+        }
     }
 
     @PostMapping("provider/create")

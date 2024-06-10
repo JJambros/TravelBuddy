@@ -104,7 +104,13 @@
             </form>
             <table class="table table-striped">
                 <tr data-th-each="service: ${servicesList}">
-                    <td data-th-text="${service.location}"></td>
+                    <td>
+                        <span data-th-text="${service.location}"></span>
+                        <form action="/services/service-info" method="get" style="display: inline;">
+                            <input type="hidden" name="id" data-th-value="${service.id}">
+                            <button type="submit">Add service info</button>
+                        </form>
+                    </td>
                 </tr>
             </table>
         </div>
