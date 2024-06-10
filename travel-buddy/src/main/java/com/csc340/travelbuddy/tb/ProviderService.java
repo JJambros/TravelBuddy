@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProviderService {
@@ -22,7 +23,9 @@ public class ProviderService {
         return providerRepository.findById(id).orElse(null);
     }
 
-
+    public Optional<Provider> findByEmailAndPassword(String email, String password) {
+        return providerRepository.findByEmailAndPassword(email, password);
+    }
 
 
 
