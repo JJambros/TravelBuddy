@@ -63,6 +63,16 @@
         <div class="col-md-4">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center experience">
+                    <span>Your Trips</span>
+                </div><br>
+                <div th:each="trip : ${customer.trips}">
+                    <div>
+                        <h5 th:text="${trip.destination}"></h5>
+                        <p th:text="${trip.description}"></p>
+                        <p th:text="'$' + ${trip.price}"></p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center experience">
                     <span>Edit Your Reviews</span>
                     <a class="btn btn-link" th:href="@{/reviews/write(customerId=${customer.id}, tripId=1)}">Write a Review</a>
                     <!-- Replace tripId=1 with the actual trip ID -->

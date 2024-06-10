@@ -34,8 +34,8 @@ public class ProviderService {
             if(id == review.getId()){
                 providerReviews.add(review);
             }
-            return providerReviews;
         }
+        return providerReviews;
     }
 
     public Object replyReview(long id, Review reviewReply) {

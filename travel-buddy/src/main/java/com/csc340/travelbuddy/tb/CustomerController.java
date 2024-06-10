@@ -63,4 +63,21 @@ public class CustomerController {
         customerService.deleteCustomer(id);
         return "redirect:/customers/signup";
     }
+    @GetMapping("/login")
+    public String showLoginForm(Model model) {
+        model.addAttribute("customer", new Customer());
+        return "login";
+    }
+    @PostMapping("/login")
+    public String loginCustomer(@RequestParam String email, @RequestParam String password, Model model) {
+        Optional<Customer> customerOpt = customerService.findByEmailAndPassword(email, password);
+        if (customerOpt.isPresent()) {
+            Customer customer = customerOpt.get();
+            model.addAttribute("customer", customer);
+            return "redirect:/customers/main?id=" + customer.getId();
+        } else {
+            model.addAttribute("error", "Invalid email or password");
+            return "login";
+        }
+    }
 }

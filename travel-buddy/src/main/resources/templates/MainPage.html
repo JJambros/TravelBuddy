@@ -101,20 +101,14 @@
 <div class="container">
     <h2 class="section-title">Explore Popular Destinations</h2>
     <div class="grid">
-        <div class="card">
-            <img src="/static/images/rsz_shutterstock_1869263059_1-1.jpg" alt="Destination 1">
-            <h3>Enjoy</h3>
-            <p>Take the vacation of your dreams</p>
-        </div>
-        <div class="card">
-            <img src="/static/images/Perfect-Dayv2.jpg" alt="Destination 2">
-            <h3>Find the best deals</h3>
-            <p>A good vacation doesn't mean you have to break the bank</p>
-        </div>
-        <div class="card">
-            <img src="/static/images/36-best-vacation-spots-in-the-world-trending-now.jpg" alt="Destination 3">
-            <h3>Discover new experiences</h3>
-            <p>Take the vacation of your dreams</p>
+        <div th:each="trip : ${trips}">
+            <div class="card">
+                <img th:src="@{/static/images/${trip.image}}" alt="Destination 1">
+                <h3 th:text="${trip.destination}"></h3>
+                <p th:text="${trip.description}"></p>
+                <p th:text="'$' + ${trip.price}"></p>
+                <a th:href="@{/api/trips/book(customerId=${customer.id}, tripId=${trip.id})}" class="btn btn-primary">Book Now</a>
+            </div>
         </div>
     </div>
 </div>
