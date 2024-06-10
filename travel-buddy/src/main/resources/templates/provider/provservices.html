@@ -9,8 +9,8 @@
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link href="../../static/bootstrap.min.css" rel="stylesheet">
-    <link href="../../static/sidebars.css" rel="stylesheet">
+    <link href="/bootstrap.min.css" rel="stylesheet">
+    <link href="/sidebars.css" rel="stylesheet">
 </head>
 <body>
 
@@ -97,7 +97,16 @@
     </div>
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <a href="#" class="btn btn-primary">Add a service...</a>
+            <form action="/services/create" method="post">
+                <input type="number" id="providerid" name="providerid"  data-th-value="${id}" readonly/>
+                <input type="text" id="location" name="location" placeholder="Location"/>
+                <button type="submit">Add a location...</button>
+            </form>
+            <table class="table table-striped">
+                <tr data-th-each="service: ${servicesList}">
+                    <td data-th-text="${service.location}"></td>
+                </tr>
+            </table>
         </div>
     </div>
 

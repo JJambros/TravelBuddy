@@ -12,10 +12,20 @@ public class ProviderService {
     @Autowired
     ProviderRepository providerRepository;
     ReviewRepository reviewRepository;
+    TripRepository tripRepository;
 
     public Object createProvider(Provider provider) {
         return providerRepository.save(provider);
     }
+
+    public Provider getProviderById(int id) {
+        return providerRepository.findById(id).orElse(null);
+    }
+
+
+
+
+
 
     public Object updateProvider(int id, Provider providerNew) {
         Provider provider = providerRepository.findById(id).orElseThrow();
@@ -34,6 +44,7 @@ public class ProviderService {
             if(id == review.getId()){
                 providerReviews.add(review);
             }
+
         }
         return providerReviews;
     }
@@ -46,6 +57,12 @@ public class ProviderService {
 
     public String getCustomerStats(List<Customer> customers) {
         return "You have " + customers.size() + " customers";
+    }
+
+    public Object setTripSpecial(int specialid, Trip trip){
+        Trip trips = tripRepository.findById(trip.getId()).orElseThrow();
+        trip.setSpecialFlag(true);
+        return tripRepository.save(trip);
     }
 
 }

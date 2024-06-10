@@ -9,8 +9,8 @@
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link href="../../static/bootstrap.min.css" rel="stylesheet">
-    <link href="../../static/sidebars.css" rel="stylesheet">
+    <link href="/bootstrap.min.css" rel="stylesheet">
+    <link href="/sidebars.css" rel="stylesheet">
 </head>
 <body>
 
@@ -52,25 +52,25 @@
                 </a>
             </li>
             <li>
-                <a href="provstats.html" class="nav-link text-white">
+                <a data-th-href="@{/provider/main/{id}/stats(id=${id})}" class="nav-link text-white">
                     <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2" style="fill: white;"/></svg>
                     Statistics
                 </a>
             </li>
             <li>
-                <a href="provorders.html" class="nav-link text-white">
+                <a data-th-href="@{/provider/main/{id}/orders(id=${id})}" class="nav-link text-white">
                     <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table" style="fill: white;"/></svg>
                     Orders
                 </a>
             </li>
             <li>
-                <a href="provservices.html" class="nav-link text-white">
+                <a data-th-href="@{/provider/main/{id}/services(id=${id})}" class="nav-link text-white">
                     <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid" style="fill: white;"/></svg>
                     Services
                 </a>
             </li>
             <li>
-                <a href="provreviews.html" class="nav-link text-white">
+                <a data-th-href="@{/provider/main/{id}/reviews(id=${id})}" class="nav-link text-white">
                     <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle" style="fill: white;"/></svg>
                     Reviews
                 </a>
