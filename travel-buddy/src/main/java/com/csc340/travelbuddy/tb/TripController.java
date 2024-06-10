@@ -2,10 +2,11 @@ package com.csc340.travelbuddy.tb;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/api/trips")
 public class TripController {
     @Autowired

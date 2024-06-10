@@ -1,19 +1,37 @@
 package com.csc340.travelbuddy.tb;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/api/reviews")
+@Controller
+@RequestMapping("/reviews")
 public class ReviewController {
     @Autowired
     private ReviewService reviewService;
 
-    @PostMapping
-    public Review createReview(@RequestBody Review review) {
-        return reviewService.createReview(review);
+    @GetMapping("/write")
+    public String showReviewForm(@RequestParam Long customerId, @RequestParam Long tripId, Model model) {
+        Review review = new Review();
+        model.addAttribute("review", review);
+        model.addAttribute("customerId", customerId);
+        model.addAttribute("tripId", tripId);
+        return "write-review";
+    }
+
+    @PostMapping("/write")
+    public String submitReview(@ModelAttribute Review review, @RequestParam Long customerId, @RequestParam Long tripId, Model model) {
+        Customer customer = new Customer();
+        customer.setId(customerId);
+        Trip trip = new Trip();
+        trip.setId(tripId);
+        review.setCustomer(customer);
+        review.setTrip(trip);
+        reviewService.createReview(review);
+        return "redirect:/customers/profile?id=" + customerId;
     }
 
     @GetMapping
@@ -24,5 +42,10 @@ public class ReviewController {
     @GetMapping("/trip/{tripId}")
     public List<Review> getReviewsByTripId(@PathVariable Long tripId) {
         return reviewService.getReviewsByTripId(tripId);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteReview(@PathVariable Long id) {
+        reviewService.deleteReview(id);
     }
 }

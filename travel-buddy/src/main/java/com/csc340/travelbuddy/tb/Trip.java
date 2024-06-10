@@ -46,6 +46,13 @@ public class Trip {
         return reviews;
     }
 
+    public List<Customer> getCustomers() {
+        return customers;
+    }
+
+    @ManyToMany(mappedBy = "trips")
+    private List<Customer> customers;
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -64,5 +71,9 @@ public class Trip {
 
     public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
+    }
+
+    public void setCustomers(List<Customer> customers) {
+        this.customers = customers;
     }
 }

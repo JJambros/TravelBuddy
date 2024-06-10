@@ -16,7 +16,7 @@ public class CustomerService {
     }
 
     public Customer updateCustomer(Long id, Customer customerDetails) {
-        Customer customer = customerRepository.findById(id).orElseThrow();
+        Customer customer = customerRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Customer not found with ID: " + id));
         customer.setFirstName(customerDetails.getFirstName());
         customer.setLastName(customerDetails.getLastName());
         customer.setEmail(customerDetails.getEmail());
@@ -35,5 +35,8 @@ public class CustomerService {
 
     public void deleteCustomer(Long id) {
         customerRepository.deleteById(id);
+    }
+    public Optional<Customer> findByEmailAndPassword(String email, String password) {
+        return customerRepository.findByEmailAndPassword(email, password);
     }
 }

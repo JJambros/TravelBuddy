@@ -23,4 +23,7 @@ public class ReviewService {
                 .filter(review -> review.getTrip().getId().equals(tripId))
                 .toList();
     }
+    public void deleteReview(Long id) {
+        reviewRepository.deleteById(id);
+    }
 }

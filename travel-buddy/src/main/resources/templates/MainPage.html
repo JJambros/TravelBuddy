@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Buddy - Your Adventure Starts Here</title>
+    <title>Main Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,7 +25,7 @@
             text-decoration: none;
         }
         .hero {
-            background-image: url('../static/images/bg-signup.jpg'); /* Replace with a real image URL */
+            background-image: url('/static/images/bg-signup.jpg');
             background-size: cover;
             color: white;
             text-align: center;
@@ -81,9 +81,9 @@
 <div class="navbar">
     <div class="logo">Travel Buddy</div>
     <div class="links">
-        <a href="MainPage.html">Home</a> <!-- Updated to link to the main page -->
+        <a th:href="@{/customers/main(id=${customer.id})}">Home</a>
         <a href="#">Destinations</a>
-        <a href="Profile.html">Profile</a>
+        <a th:href="@{/customers/profile(id=${customer.id})}">Profile</a>
     </div>
 </div>
 
@@ -101,20 +101,14 @@
 <div class="container">
     <h2 class="section-title">Explore Popular Destinations</h2>
     <div class="grid">
-        <div class="card">
-            <img src="../static/images/rsz_shutterstock_1869263059_1-1.jpg" alt="Destination 1">
-            <h3>Enjoy</h3>
-            <p>Take the vacation of your dreams</p>
-        </div>
-        <div class="card">
-            <img src="../static/images/Perfect-Dayv2.jpg" alt="Destination 2">
-            <h3>Find the best deals</h3>
-            <p>A good vacation doesn't mean you have to break the bank</p>
-        </div>
-        <div class="card">
-            <img src="../static/images/36-best-vacation-spots-in-the-world-trending-now.jpg" alt="Destination 3">
-            <h3>Discover new experiences</h3>
-            <p>Take the vacation of your dreams</p>
+        <div th:each="trip : ${trips}">
+            <div class="card">
+                <img th:src="@{/static/images/${trip.image}}" alt="Destination 1">
+                <h3 th:text="${trip.destination}"></h3>
+                <p th:text="${trip.description}"></p>
+                <p th:text="'$' + ${trip.price}"></p>
+                <a th:href="@{/api/trips/book(customerId=${customer.id}, tripId=${trip.id})}" class="btn btn-primary">Book Now</a>
+            </div>
         </div>
     </div>
 </div>

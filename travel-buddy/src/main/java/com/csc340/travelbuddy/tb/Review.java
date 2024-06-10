@@ -18,45 +18,45 @@ public class Review {
     private String comment;
     private Integer rating;
 
+    // Getters and Setters
     public Long getId() {
         return id;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public Trip getTrip() {
-        return trip;
-    }
-
-    public String getComment() {
-        return comment;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public Trip getTrip() {
+        return trip;
     }
 
     public void setTrip(Trip trip) {
         this.trip = trip;
     }
 
+    public String getComment() {
+        return comment;
+    }
+
     public void setComment(String comment) {
         this.comment = comment;
     }
 
-    public void setRating(Integer rating) {
-        this.rating = rating;
-    }
-
     public Integer getRating() {
         return rating;
+    }
 
+    public void setRating(Integer rating) {
+        this.rating = rating;
     }
 }
 
