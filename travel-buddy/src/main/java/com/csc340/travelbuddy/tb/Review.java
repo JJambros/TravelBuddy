@@ -3,17 +3,16 @@ package com.csc340.travelbuddy.tb;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "review")
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
     @ManyToOne
-    @JoinColumn(name = "trip_id", nullable = false)
     private Trip trip;
 
     private String comment;

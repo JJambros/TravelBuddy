@@ -13,6 +13,16 @@ public class Trip {
     private String description;
     private Double price;
 
+    public boolean isSpecialFlag() {
+        return specialFlag;
+    }
+
+    public void setSpecialFlag(boolean specialFlag) {
+        this.specialFlag = specialFlag;
+    }
+
+    private boolean specialFlag;
+
     @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL)
     private List<Review> reviews;
 
