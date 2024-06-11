@@ -94,32 +94,10 @@
 <div class="hero">
     <h1>Discover Your Next Adventure</h1>
     <p>Find the best deals on flights, hotels, and vacation packages.</p>
-    <div class="search-bar">
-        <input type="text" placeholder="Where to?">
-        <input type="date">
-        <input type="date">
-        <button>Search</button>
-    </div>
 </div>
 
 <div id="map"></div>
 
-
-
-<div class="container">
-    <h2 class="section-title">Explore Popular Destinations</h2>
-    <div class="grid">
-        <div th:each="trip : ${trips}">
-            <div class="card">
-                <img th:src="@{/images/${trip.image}}" alt="Destination 1">
-                <h3 th:text="${trip.destination}"></h3>
-                <p th:text="${trip.description}"></p>
-                <p th:text="'$' + ${trip.price}"></p>
-                <a th:href="@{/api/trips/book(customerId=${customer.id}, tripId=${trip.id})}" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="footer">
     <p>&copy; 2024 Travel Buddy. All rights reserved.</p>

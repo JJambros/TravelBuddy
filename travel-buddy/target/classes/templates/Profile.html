@@ -68,7 +68,6 @@
                 <div th:each="trip : ${customer.trips}">
                     <div>
                         <h5 th:text="${trip.destination}"></h5>
-                        <p th:text="${trip.description}"></p>
                         <p th:text="'$' + ${trip.price}"></p>
                     </div>
                 </div>
