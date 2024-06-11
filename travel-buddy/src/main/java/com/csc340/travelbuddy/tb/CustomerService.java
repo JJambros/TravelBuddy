@@ -24,6 +24,7 @@ public class CustomerService {
         customer.setEmail(customerDetails.getEmail());
         customer.setPassword(customerDetails.getPassword());
         customer.setMobileNumber(customerDetails.getMobileNumber());
+        customer.setTrips(customerDetails.getTrips()); // Add this line to update trips
         return customerRepository.save(customer);
     }
 

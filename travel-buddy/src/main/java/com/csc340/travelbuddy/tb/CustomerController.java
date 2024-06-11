@@ -100,5 +100,4 @@ public class CustomerController {
         }
         return "book-trip";
     }
-
 }
