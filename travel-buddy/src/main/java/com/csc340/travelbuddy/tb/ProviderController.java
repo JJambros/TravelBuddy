@@ -21,6 +21,10 @@ public class ProviderController {
     @Autowired
     TripService tripService;
 
+    // Default view
+
+
+
     // Registration views
 
     @GetMapping("provider/register")
@@ -55,6 +59,12 @@ public class ProviderController {
         return "provider/ProviderSignupSuccess";
     }
 
+    @GetMapping("provider/delete")
+    public String deleteProvider(@RequestParam int id) {
+        providerService.deleteProvider(id);
+        return "provider/ProviderSignup";
+    }
+
     // Login views
 
     @GetMapping("provider/main/{id}")
@@ -81,6 +91,25 @@ public class ProviderController {
         return "provider/provreviews";
     }
 
+    @GetMapping("provider/main/{id}/profile")
+    public String showProviderProfile(@PathVariable int id, Model model){
+        model.addAttribute("provider", providerService.getProviderById(id));
+        return "provider/ProviderProfile";
+    }
+
+    @PostMapping("provider/main/{id}/profile")
+    public String updateProviderProfile(@ModelAttribute Provider provider, @PathVariable int id, Model model){
+        try {
+            Provider updatedProvider = providerService.updateProvider(provider);
+            model.addAttribute("provider", updatedProvider);
+            return "redirect:/provider/main/" + provider.getId();
+        } catch (Exception e) {
+            model.addAttribute("error", e.getMessage());
+            return "redirect:/provider/main/" + provider.getId();
+        }
+    }
+
+
     // Services
 
 
@@ -89,15 +118,8 @@ public class ProviderController {
 
 
 
-    @PutMapping("provider/update/{id}")
-    public Object updateProvider(@PathVariable int id, @RequestBody Provider provider) {
-        return providerService.updateProvider(id, provider);
-    }
 
-    @DeleteMapping("provider/delete/{id}")
-    public void deleteProvider(@PathVariable int id) {
-        providerService.deleteProvider(id);
-    }
+
 
     @GetMapping("provider/reviews/{id}")
     public List<Review> getProviderReviews(@PathVariable int id) {

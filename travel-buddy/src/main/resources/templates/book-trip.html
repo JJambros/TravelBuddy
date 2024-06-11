@@ -23,14 +23,16 @@
 <body>
 <div class="container">
     <h1>Trips to <span th:text="${country}"></span></h1>
-    <div th:if="${#lists.isEmpty(trips)}">
+    <div th:if="${#lists.isEmpty(services)}">
         <p>No trips available to this destination.</p>
     </div>
-    <div th:each="trip : ${trips}" class="trip">
-        <h2 th:text="${trip.destination}"></h2>
-        <p th:text="${trip.description}"></p>
-        <p>Price: $<span th:text="${trip.price}"></span></p>
-        <a th:href="@{/api/trips/book(customerId=${customer.id}, tripId=${trip.id})}">Book Now</a>
+    <div th:each="service : ${services}" class="trip">
+        <h2 th:text="${service.departure}"></h2>
+        <p th:text="${service.departuredate}"></p>
+        <p th:text="${service.returndate}"></p>
+        <p>Flight Provider: <span th:text="${service.providerid}"></span></p>
+        <p>Price: $<span th:text="${service.price}"></span></p>
+        <a th:href="@{/api/trips/book(customerId=${customer.id}, tripId=${service.id})}">Book Now</a>
     </div>
 </div>
 </body>
