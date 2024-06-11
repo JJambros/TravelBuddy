@@ -8,7 +8,7 @@ import java.util.List;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     private String firstName;
     private String lastName;
@@ -16,21 +16,10 @@ public class Customer {
     private String password;
     private String mobileNumber;
 
-    @ManyToMany
-    @JoinTable(
-            name = "customer_trip",
-            joinColumns = @JoinColumn(name = "customer_id"),
-            inverseJoinColumns = @JoinColumn(name = "trip_id"))
-    private List<Trip> trips;
-
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private List<Review> reviews;
 
-    public List<Trip> getTrips() {
-        return trips;
-    }
-
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -54,9 +43,7 @@ public class Customer {
         return mobileNumber;
     }
 
-
-
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -82,10 +69,6 @@ public class Customer {
 
     public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
-    }
-
-    public void setTrips(List<Trip> trips) {
-        this.trips = trips;
     }
 
     public List<Review> getReviews() {

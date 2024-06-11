@@ -34,7 +34,7 @@ public class CustomerController {
     }
 
     @GetMapping("/main")
-    public String showMainPage(@RequestParam Long id, Model model) {
+    public String showMainPage(@RequestParam int id, Model model) {
         Optional<Customer> customer = customerService.getCustomerById(id);
         if (customer.isPresent()) {
             model.addAttribute("customer", customer.get());
@@ -44,7 +44,7 @@ public class CustomerController {
     }
 
     @GetMapping("/profile")
-    public String showProfile(@RequestParam Long id, Model model) {
+    public String showProfile(@RequestParam int id, Model model) {
         Optional<Customer> customer = customerService.getCustomerById(id);
         if (customer.isPresent()) {
             model.addAttribute("customer", customer.get());
@@ -66,7 +66,7 @@ public class CustomerController {
     }
 
     @GetMapping("/delete")
-    public String deleteCustomer(@RequestParam Long id) {
+    public String deleteCustomer(@RequestParam int id) {
         customerService.deleteCustomer(id);
         return "redirect:/customers/index";
     }
@@ -89,7 +89,7 @@ public class CustomerController {
     }
 
     @GetMapping("/book-trip")
-    public String bookTrip(@RequestParam("country") String country, @RequestParam("id") Long id, Model model){
+    public String bookTrip(@RequestParam("country") String country, @RequestParam("id") int id, Model model){
         List<Services> services = customerService.findServicesByCountry(country);
         model.addAttribute("country", country);
         model.addAttribute("services", services);

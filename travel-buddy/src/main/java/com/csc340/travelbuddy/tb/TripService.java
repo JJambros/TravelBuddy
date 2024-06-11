@@ -10,21 +10,21 @@ public class TripService {
     @Autowired
     private TripRepository tripRepository;
 
-    public Trip createTrip(Trip trip) {
-        return tripRepository.save(trip);
+    public void createTrip(Trip trip) {
+        tripRepository.save(trip);
     }
 
     public List<Trip> getAllTrips() {
         return tripRepository.findAll();
     }
 
-    public Trip getTripById(Long id) {
+    public Trip getTripById(int id) {
         return tripRepository.findById(id).orElseThrow();
     }
 
-    public List<Trip> getTripsByCountry(String country) {
-        return tripRepository.findByDestinationContaining(country);
-    }
+//    public List<Trip> getTripsByCountry(String country) {
+//        return tripRepository.findByDestinationContaining(country);
+//    }
 
 
 }

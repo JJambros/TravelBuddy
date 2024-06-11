@@ -23,7 +23,7 @@ public class ReviewController {
     }
 
     @PostMapping("/write")
-    public String submitReview(@ModelAttribute Review review, @RequestParam Long customerId, @RequestParam Long tripId, Model model) {
+    public String submitReview(@ModelAttribute Review review, @RequestParam int customerId, @RequestParam int tripId, Model model) {
         Customer customer = new Customer();
         customer.setId(customerId);
         Trip trip = new Trip();
@@ -39,10 +39,10 @@ public class ReviewController {
         return reviewService.getAllReviews();
     }
 
-    @GetMapping("/trip/{tripId}")
-    public List<Review> getReviewsByTripId(@PathVariable Long tripId) {
-        return reviewService.getReviewsByTripId(tripId);
-    }
+//    @GetMapping("/trip/{tripId}")
+//    public List<Review> getReviewsByTripId(@PathVariable Long tripId) {
+//        return reviewService.getReviewsByTripId(tripId);
+//    }
 
     @DeleteMapping("/{id}")
     public void deleteReview(@PathVariable Long id) {

@@ -18,11 +18,11 @@ public class ReviewService {
         return reviewRepository.findAll();
     }
 
-    public List<Review> getReviewsByTripId(Long tripId) {
-        return reviewRepository.findAll().stream()
-                .filter(review -> review.getTrip().getId().equals(tripId))
-                .toList();
-    }
+//    public List<Review> getReviewsByTripId(Long tripId) {
+//        return reviewRepository.findAll().stream()
+//                .filter(review -> review.getTrip().getId().equals(tripId))
+//                .toList();
+//    }
     public void deleteReview(Long id) {
         reviewRepository.deleteById(id);
     }

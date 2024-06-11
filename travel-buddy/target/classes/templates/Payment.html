@@ -27,7 +27,6 @@
     <div class="trip-details">
         <h2>Trip Details</h2>
         <p><strong>Destination:</strong> <span id="destination" th:text="${trip.destination}"></span></p>
-        <p><strong>Description:</strong> <span id="description" th:text="${trip.description}"></span></p>
         <p><strong>Price:</strong> <span id="price" th:text="'$' + ${trip.price}"></span></p>
     </div>
 
@@ -54,7 +53,7 @@
             <input type="text" id="zipcode" name="zipcode" required>
 
             <input type="hidden" name="tripId" th:value="${trip.id}">
-            <input type="hidden" name="customerId" th:value="${customer.id}">
+            <input type="hidden" name="customerId" th:value="${trip.customerId}">
 
             <button type="submit">Complete Payment</button>
         </form>
