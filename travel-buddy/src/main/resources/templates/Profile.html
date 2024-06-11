@@ -70,12 +70,11 @@
                         <h5 th:text="${trip.destination}"></h5>
                         <p th:text="${trip.description}"></p>
                         <p th:text="'$' + ${trip.price}"></p>
+                        <a class="btn btn-link" th:href="@{/reviews/write(customerId=${customer.id}, tripId=${trip.id})}">Write a Review</a>
                     </div>
                 </div>
                 <div class="d-flex justify-content-between align-items-center experience">
                     <span>Edit Your Reviews</span>
-                    <a class="btn btn-link" th:href="@{/reviews/write(customerId=${customer.id}, tripId=1)}">Write a Review</a>
-                    <!-- Replace tripId=1 with the actual trip ID -->
                 </div><br>
                 <a class="btn btn-danger" th:href="@{/customers/delete(id=${customer.id})}">Delete Profile</a>
             </div>
