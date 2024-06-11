@@ -54,8 +54,18 @@ public class TripController {
         }
         return "Payment";
     }
+
     @PostMapping("/Payment")
-    public String processPayment(@RequestParam int tripId, @RequestParam int customerId, Model model) {
+    public String processPayment(
+            @RequestParam("tripId") int tripId,
+            @RequestParam("customerId") int customerId,
+            @RequestParam("card-name") String cardName,
+            @RequestParam("card-number") String cardNumber,
+            @RequestParam("expiry-date") String expiryDate,
+            @RequestParam("cvv") String cvv,
+            @RequestParam("billing-address") String billingAddress,
+            @RequestParam("zipcode") String zipcode,
+            Model model) {
 
         System.out.println("Processing payment for tripId: " + tripId + " and customerId: " + customerId);
 
