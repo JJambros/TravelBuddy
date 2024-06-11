@@ -14,9 +14,9 @@ public class TripController {
     @Autowired
     private TripService tripService;
     @Autowired
-    private CustomerService customerService;
-    @Autowired
     private ServicesService servicesService;
+    @Autowired
+    private CustomerService customerService;
 
     @PostMapping
     public Trip createTrip(@RequestBody Trip trip) {
@@ -49,8 +49,23 @@ public class TripController {
             trip.setProviderid(service.getProviderid());
             trip.setCustomerId(customerId);
             tripService.createTrip(trip);
+            model.addAttribute("customerId", customerId);
             model.addAttribute("trip", trip);
         }
         return "Payment";
+    }
+    @PostMapping("/Payment")
+    public String processPayment(@RequestParam int tripId, @RequestParam int customerId, Model model) {
+
+        System.out.println("Processing payment for tripId: " + tripId + " and customerId: " + customerId);
+
+        Trip trip = tripService.getTripById(tripId);
+        Customer customer = customerService.getCustomerById(customerId).orElseThrow();
+
+        customer.getTrips().add(trip);
+        customerService.updateCustomer(customer.getId(), customer);
+
+        model.addAttribute("message", "Thank you for your purchase, enjoy your trip");
+        return "redirect:/customers/main?id=" + customerId;
     }
 }

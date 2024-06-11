@@ -76,7 +76,6 @@ public class CustomerController {
         model.addAttribute("customer", new Customer());
         return "login";
     }
-
     @PostMapping("/login")
     public String loginCustomer(@RequestParam String email, @RequestParam String password, Model model) {
         Optional<Customer> customerOpt = customerService.findByEmailAndPassword(email, password);
@@ -102,10 +101,5 @@ public class CustomerController {
         }
         return "book-trip";
     }
-
-
-
-
-
 }
 

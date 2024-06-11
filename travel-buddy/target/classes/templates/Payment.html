@@ -32,7 +32,7 @@
 
     <div class="payment-form">
         <h2>Payment Information</h2>
-        <form id="payment-form" method="post" th:action="@{/payment}">
+        <form id="payment-form" method="post" th:action="@{/api/trips/Payment}">
 
             <label for="card-name">Name on Card</label>
             <input type="text" id="card-name" name="card-name" required>
@@ -53,7 +53,7 @@
             <input type="text" id="zipcode" name="zipcode" required>
 
             <input type="hidden" name="tripId" th:value="${trip.id}">
-            <input type="hidden" name="customerId" th:value="${trip.customerId}">
+            <input type="hidden" name="customerId" th:value="${customerId}">
 
             <button type="submit">Complete Payment</button>
         </form>
