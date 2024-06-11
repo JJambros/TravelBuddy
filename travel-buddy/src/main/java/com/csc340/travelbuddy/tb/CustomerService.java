@@ -42,5 +42,6 @@ public class CustomerService {
     public Optional<Customer> findByEmailAndPassword(String email, String password) {
         return customerRepository.findByEmailAndPassword(email, password);
     }
+
     public List<Services> findServicesByCountry(String country) { return servicesRepository.findByLocation(country); }
 }
