@@ -21,4 +21,8 @@ public class TripService {
     public Trip getTripById(Long id) {
         return tripRepository.findById(id).orElseThrow();
     }
+
+    public List<Trip> getTripsByCountry(String country) {
+        return tripRepository.findByDestinationContaining(country);
+    }
 }

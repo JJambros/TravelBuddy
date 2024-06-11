@@ -26,4 +26,9 @@ public class TripController {
     public Trip getTripById(@PathVariable Long id) {
         return tripService.getTripById(id);
     }
+
+    @GetMapping(params = "country")
+    public List<Trip> getTripsByCountry(@RequestParam String country) {
+        return tripService.getTripsByCountry(country);
+    }
 }
