@@ -48,4 +48,18 @@ public class ServicesController {
         String url = "redirect:/provider/main/" + id + "/services";
         return url;
     }
+
+    @GetMapping("/services/delete-service")
+    public String deleteService(Services services) {
+        int id;
+        Optional<Services> serviceOptional = servicesService.findById(services.getId());
+        if (serviceOptional.isPresent()) {
+            Services service = serviceOptional.get();
+            id = service.getProviderid();
+        } else {
+            id = services.getProviderid();
+        }
+        servicesService.deleteById(services.getId());
+        return "redirect:/provider/main/" + id + "/services";
+    }
 }

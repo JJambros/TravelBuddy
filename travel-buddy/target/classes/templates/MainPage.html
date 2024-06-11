@@ -157,7 +157,9 @@
     // Function to handle GeoJSON data
     function onEachFeature(feature, layer) {
         if (feature.properties && feature.properties.name) {
-            layer.bindPopup(feature.properties.name);
+            var countryName = feature.properties.name;
+            var popupContent = '<a href="/book-trip?country=' + encodeURIComponent(countryName) + '">Go to ' + countryName + '!</a>';
+            layer.bindPopup(popupContent);
         }
     }
 
