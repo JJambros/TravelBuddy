@@ -13,6 +13,12 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
+    @GetMapping("/index")
+    public String showIndexPage(Model model) {
+        model.addAttribute("customer", new Customer());
+        return "index";
+    }
+
     @GetMapping("/signup")
     public String showSignupForm(Model model) {
         model.addAttribute("customer", new Customer());
@@ -61,7 +67,7 @@ public class CustomerController {
     @GetMapping("/delete")
     public String deleteCustomer(@RequestParam Long id) {
         customerService.deleteCustomer(id);
-        return "redirect:/customers/signup";
+        return "redirect:/customers/index";
     }
     @GetMapping("/login")
     public String showLoginForm(Model model) {
