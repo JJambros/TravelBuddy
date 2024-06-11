@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="174b8446-a71e-4127-ae33-0c8f1a088757" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b8b87c10-1af7-48b2-ba03-1992d2b07dd9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b8b87c10-1af7-48b2-ba03-1992d2b07dd9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/PaymentController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/TripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/TripController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/Payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/Payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/PaymentController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/TripController.class" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/TripController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/templates/Payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/templates/Payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/templates/book-trip.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/templates/book-trip.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
