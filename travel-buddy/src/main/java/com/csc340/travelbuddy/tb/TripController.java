@@ -12,6 +12,8 @@ import java.util.List;
 public class TripController {
     @Autowired
     private TripService tripService;
+    @Autowired
+    private CustomerService customerService;
 
     @PostMapping
     public Trip createTrip(@RequestBody Trip trip) {
@@ -31,5 +33,15 @@ public class TripController {
     @GetMapping(params = "country")
     public List<Trip> getTripsByCountry(@RequestParam String country) {
         return tripService.getTripsByCountry(country);
+    }
+    @PostMapping("/book-trip")
+    public String bookTrip(@RequestParam Long customerId, @RequestParam Long tripId, Model model) {
+        Trip trip = tripService.getTripById(tripId);
+        Customer customer = customerService.getCustomerById(customerId).orElseThrow();
+
+        model.addAttribute("trip", trip);
+        model.addAttribute("customer", customer);
+
+        return "Payment";
     }
 }

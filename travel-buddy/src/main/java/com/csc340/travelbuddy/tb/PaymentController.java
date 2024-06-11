@@ -10,17 +10,20 @@ public class PaymentController {
 
     @Autowired
     private TripService tripService;
+    @Autowired
+    private CustomerService customerService;
 
-    @GetMapping("/payment")
-    public String showPaymentPage(@RequestParam Long tripId, Model model) {
-        Trip trip = tripService.getTripById(tripId);  // Use the instance method
-        model.addAttribute("trip", trip);
-        return "payment";
-    }
-
-    @PostMapping("/payment")
+    @PostMapping("/Payment")
     public String processPayment(@RequestParam Long tripId, @RequestParam Long customerId, Model model) {
         // Process the payment here (implementation depends on your payment processing logic)
+
+        // Fetch the trip and customer
+        Trip trip = tripService.getTripById(tripId);
+        Customer customer = customerService.getCustomerById(customerId).orElseThrow();
+
+        // Add trip to customer's trips
+        customer.getTrips().add(trip);
+        customerService.updateCustomer(customer.getId(), customer);
 
         // Redirect to the main page with a success message
         model.addAttribute("message", "Thank you for your purchase, enjoy your trip");

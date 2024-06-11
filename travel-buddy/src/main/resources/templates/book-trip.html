@@ -32,7 +32,7 @@
         <p th:text="${service.returndate}"></p>
         <p>Flight Provider: <span th:text="${service.providerid}"></span></p>
         <p>Price: $<span th:text="${service.price}"></span></p>
-        <a th:href="@{/api/trips/book(customerId=${customer.id}, tripId=${service.id})}">Book Now</a>
+        <a th:href="@{/api/trips/book-trip(customerId=${customer.id}, tripId=${service.id})}">Book Now</a>
     </div>
 </div>
 </body>
