@@ -3,6 +3,7 @@ package com.csc340.travelbuddy.tb;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 
 import java.util.List;
 
@@ -11,6 +12,12 @@ import java.util.List;
 public class TripController {
     @Autowired
     private TripService tripService;
+
+    @GetMapping("/book-trip")
+    public String bookTrip(@RequestParam("country") String country, Model model){
+        model.addAttribute("country", country);
+        return "book-trip";
+    }
 
     @PostMapping
     public Trip createTrip(@RequestBody Trip trip) {
