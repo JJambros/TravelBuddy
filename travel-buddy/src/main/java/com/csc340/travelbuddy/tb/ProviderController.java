@@ -20,9 +20,8 @@ public class ProviderController {
     CustomerService customerService;
     @Autowired
     TripService tripService;
-
-    // Default view
-
+    @Autowired
+    ServicesService servicesService;
 
 
     // Registration views
@@ -76,12 +75,16 @@ public class ProviderController {
     @GetMapping("provider/main/{id}/stats")
     public String providerStats(@PathVariable int id, Model model){
         model.addAttribute("provider", providerService.getProviderById(id));
+        model.addAttribute("totalUsers", customerService.getUserCount());
+        model.addAttribute("totalServices", servicesService.servicesByProvider(id));
+        model.addAttribute("totalBooked", tripService.tripsByProvider(id));
         return "provider/provstats";
     }
 
     @GetMapping("provider/main/{id}/orders")
     public String providerOrders(@PathVariable int id, Model model){
         model.addAttribute("provider", providerService.getProviderById(id));
+        model.addAttribute("tripList", tripService.getAllProviderTrips(id));
         return "provider/provorders";
     }
 

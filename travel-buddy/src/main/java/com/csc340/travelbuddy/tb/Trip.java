@@ -2,7 +2,7 @@ package com.csc340.travelbuddy.tb;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 @Entity
@@ -12,7 +12,6 @@ public class Trip {
     private int id;
 
     private String destination;
-    private String description;
     private int price;
     private boolean specialFlag;
     private String city;
@@ -37,10 +36,6 @@ public class Trip {
 
     public String getDestination() {
         return destination;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public int getPrice() {
@@ -69,10 +64,6 @@ public class Trip {
 
     public void setDestination(String destination) {
         this.destination = destination;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public void setPrice(int price) {

@@ -21,4 +21,8 @@ public class TripService {
     public Trip getTripById(int id) {
         return tripRepository.findById(id).orElseThrow();
     }
+
+    public int tripsByProvider(int id) { return tripRepository.countByProviderid(id); }
+
+    public List<Trip> getAllProviderTrips(int id) { return tripRepository.findByProviderid(id); }
 }

@@ -8,4 +8,5 @@ import java.util.List;
 @Repository
 public interface ServicesRepository extends JpaRepository<Services, Integer> {
     List<Services> findByLocation(String location);
+    int countByProviderid(int providerid);
 }

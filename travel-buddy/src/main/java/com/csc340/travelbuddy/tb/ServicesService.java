@@ -22,4 +22,6 @@ public class ServicesService {
     public Optional<Services> findById(int id) { return servicesRepository.findById(id); }
 
     public void deleteById(int id) { servicesRepository.deleteById(id); }
+
+    public int servicesByProvider(int id) { return servicesRepository.countByProviderid(id); }
 }

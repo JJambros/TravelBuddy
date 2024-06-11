@@ -44,4 +44,6 @@ public class CustomerService {
     }
 
     public List<Services> findServicesByCountry(String country) { return servicesRepository.findByLocation(country); }
+
+    public long getUserCount(){ return customerRepository.count(); }
 }

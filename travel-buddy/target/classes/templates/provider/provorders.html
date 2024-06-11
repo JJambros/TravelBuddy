@@ -99,28 +99,25 @@
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Service</th>
+                <th scope="col">Customer ID</th>
+                <th scope="col">Departure Location</th>
+                <th scope="col">Destination Country</th>
+                <th scope="col">Destination City</th>
+                <th scope="col">Departure Date</th>
+                <th scope="col">Return Date</th>
+                <th scope="col">Amount Paid</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Laith</td>
-                <td>Al-mesad</td>
-                <td>Tour</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Josh</td>
-                <td>Ambrose</td>
-                <td>Hotel</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry</td>
-                <td>Flight</td>
+            <tr data-th-each="trip, stat: ${tripList}">
+                <th scope="row" th:text="${stat.index + 1}"></th>
+                <td th:text="${trip.customerId}"></td>
+                <td th:text="${trip.departure}"></td>
+                <td th:text="${trip.destination}"></td>
+                <td th:text="${trip.city}"></td>
+                <td th:text="${#dates.format(trip.departureDate, 'yyyy-MM-dd')}"></td>
+                <td th:text="${#dates.format(trip.returnDate, 'yyyy-MM-dd')}"></td>
+                <td th:text="${trip.price}"></td>
             </tr>
             </tbody>
         </table>
