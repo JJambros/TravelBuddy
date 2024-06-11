@@ -138,7 +138,7 @@ public class ProviderController {
 
     @PutMapping("provider/specials/{id}/{specialid}")
     public Object setTripSpecial(@PathVariable int id, @PathVariable int specialid){
-        return providerService.setTripSpecial(specialid, tripService.getTripById((long) id));
+        return providerService.setTripSpecial(specialid, tripService.getTripById((int) id));
     }
 
 }

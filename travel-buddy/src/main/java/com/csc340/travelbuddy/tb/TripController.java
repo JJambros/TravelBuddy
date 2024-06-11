@@ -26,16 +26,11 @@ public class TripController {
     }
 
     @GetMapping("/{id}")
-    public Trip getTripById(@PathVariable Long id) {
+    public Trip getTripById(@PathVariable int id) {
         return tripService.getTripById(id);
     }
-
-    @GetMapping(params = "country")
-    public List<Trip> getTripsByCountry(@RequestParam String country) {
-        return tripService.getTripsByCountry(country);
-    }
     @PostMapping("/book-trip")
-    public String bookTrip(@RequestParam Long customerId, @RequestParam Long tripId, Model model) {
+    public String bookTrip(@RequestParam int customerId, @RequestParam int tripId, Model model) {
         Trip trip = tripService.getTripById(tripId);
         Customer customer = customerService.getCustomerById(customerId).orElseThrow();
 

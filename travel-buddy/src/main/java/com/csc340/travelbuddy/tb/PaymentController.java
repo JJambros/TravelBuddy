@@ -14,7 +14,7 @@ public class PaymentController {
     private CustomerService customerService;
 
     @PostMapping("/Payment")
-    public String processPayment(@RequestParam Long tripId, @RequestParam Long customerId, Model model) {
+    public String processPayment(@RequestParam int tripId, @RequestParam int customerId, Model model) {
         // Process the payment here (implementation depends on your payment processing logic)
 
         // Fetch the trip and customer

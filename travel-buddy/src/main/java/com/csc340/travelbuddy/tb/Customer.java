@@ -8,7 +8,7 @@ import java.util.List;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     private String firstName;
     private String lastName;
@@ -30,7 +30,7 @@ public class Customer {
         return trips;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -54,9 +54,7 @@ public class Customer {
         return mobileNumber;
     }
 
-
-
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -90,6 +88,5 @@ public class Customer {
 
     public List<Review> getReviews() {
         return reviews;
-
     }
 }

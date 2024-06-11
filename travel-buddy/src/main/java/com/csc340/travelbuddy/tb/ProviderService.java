@@ -51,7 +51,7 @@ public class ProviderService {
         return providerReviews;
     }
 
-    public Object replyReview(long id, Review reviewReply) {
+    public Object replyReview(int id, Review reviewReply) {
         Review review = reviewRepository.findById(id).orElseThrow();
         review.setComment(reviewReply.getComment());
         return reviewRepository.save(review);

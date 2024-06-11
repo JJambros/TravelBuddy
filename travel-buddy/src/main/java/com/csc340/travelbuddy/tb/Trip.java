@@ -7,26 +7,20 @@ import java.util.List;
 public class Trip {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     private String destination;
     private String description;
     private Double price;
-
-    public boolean isSpecialFlag() {
-        return specialFlag;
-    }
-
-    public void setSpecialFlag(boolean specialFlag) {
-        this.specialFlag = specialFlag;
-    }
-
     private boolean specialFlag;
 
     @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL)
     private List<Review> reviews;
 
-    public Long getId() {
+    @ManyToMany(mappedBy = "trips")
+    private List<Customer> customers;
+
+    public int getId() {
         return id;
     }
 
@@ -50,10 +44,15 @@ public class Trip {
         return customers;
     }
 
-    @ManyToMany(mappedBy = "trips")
-    private List<Customer> customers;
+    public boolean isSpecialFlag() {
+        return specialFlag;
+    }
 
-    public void setId(Long id) {
+    public void setSpecialFlag(boolean specialFlag) {
+        this.specialFlag = specialFlag;
+    }
+
+    public void setId(int id) {
         this.id = id;
     }
 
