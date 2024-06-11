@@ -7,8 +7,7 @@
     <list default="true" id="174b8446-a71e-4127-ae33-0c8f1a088757" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/TripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/TripController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/Profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/Profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/MainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/MainPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +98,7 @@
       <workItem from="1718030945366" duration="32000" />
       <workItem from="1718033871939" duration="80000" />
       <workItem from="1718040156352" duration="6415000" />
+      <workItem from="1718129752753" duration="560000" />
     </task>
     <servers />
   </component>

@@ -43,12 +43,6 @@ public class CustomerController {
         return "redirect:/customers/signup";
     }
 
-    @GetMapping("/book-trip")
-    public String bookTrip(@RequestParam("country") String country, Model model){
-        model.addAttribute("country", country);
-        return "book-trip";
-    }
-
     @GetMapping("/profile")
     public String showProfile(@RequestParam Long id, Model model) {
         Optional<Customer> customer = customerService.getCustomerById(id);
