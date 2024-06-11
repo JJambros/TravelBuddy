@@ -130,7 +130,7 @@
 
 
     </div>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 23rem;">
         <div class="card-body">
             <form action="/services/create" method="post">
                 <input type="number" id="providerid" name="providerid"  data-th-value="${service.providerid}" readonly/>
@@ -143,7 +143,11 @@
                         <span data-th-text="${services.location}"></span>
                         <form action="/services/service-info" method="get" style="display: inline;">
                             <input type="hidden" name="id" data-th-value="${services.id}">
-                            <button type="submit">Add service info</button>
+                            <button type="submit">Update Info</button>
+                        </form>
+                        <form action="/services/delete-service" method="get" style="display: inline;">
+                            <input type="hidden" name="id" data-th-value="${services.id}">
+                            <button type="submit">DELETE</button>
                         </form>
                     </td>
                 </tr>

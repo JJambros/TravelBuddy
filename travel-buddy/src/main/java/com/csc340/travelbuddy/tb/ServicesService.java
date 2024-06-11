@@ -20,4 +20,6 @@ public class ServicesService {
     public void updateService(Services services) { servicesRepository.save(services); }
 
     public Optional<Services> findById(int id) { return servicesRepository.findById(id); }
+
+    public void deleteById(int id) { servicesRepository.deleteById(id); }
 }
