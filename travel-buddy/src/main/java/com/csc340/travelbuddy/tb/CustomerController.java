@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -88,4 +89,23 @@ public class CustomerController {
             return "login";
         }
     }
+
+    @GetMapping("/book-trip")
+    public String bookTrip(@RequestParam("country") String country, @RequestParam("id") int id, Model model){
+        List<Services> services = customerService.findServicesByCountry(country);
+        model.addAttribute("country", country);
+        model.addAttribute("services", services);
+        Optional<Customer> customer = customerService.getCustomerById(id);
+        if (customer.isPresent()) {
+            model.addAttribute("customer", customer.get());
+            return "book-trip";
+        }
+        return "book-trip";
+    }
+
+
+
+
+
 }
+
