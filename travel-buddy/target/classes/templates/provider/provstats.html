@@ -46,7 +46,7 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="ProviderMain.html" class="nav-link text-white" aria-current="page">
+                <a data-th-href="@{/provider/main/{id}(id=${id})}" class="nav-link text-white">
                     <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home" style="fill: white;"/></svg>
                     Home
                 </a>
@@ -58,19 +58,19 @@
                 </a>
             </li>
             <li>
-                <a href="provorders.html" class="nav-link text-white">
+                <a data-th-href="@{/provider/main/{id}/orders(id=${id})}" class="nav-link text-white">
                     <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table" style="fill: white;"/></svg>
                     Orders
                 </a>
             </li>
             <li>
-                <a href="provservices.html" class="nav-link text-white">
+                <a data-th-href="@{/provider/main/{id}/services(id=${id})}" class="nav-link text-white">
                     <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid" style="fill: white;"/></svg>
                     Services
                 </a>
             </li>
             <li>
-                <a href="provreviews.html" class="nav-link text-white">
+                <a data-th-href="@{/provider/main/{id}/reviews(id=${id})}" class="nav-link text-white">
                     <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle" style="fill: white;"/></svg>
                     Reviews
                 </a>
@@ -83,8 +83,7 @@
                 <strong>Provider</strong>
             </a>
             <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" data-th-href="@{/provider/main/{id}/profile(id=${id})}">Profile</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Sign out</a></li>
             </ul>
@@ -101,8 +100,8 @@
     </div>
 
 </main>
-<script src="../../static/js/bootstrap.bundle.min.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
 
-<script src="../../static/js/sidebars.js"></script>
+<script src="/js/sidebars.js"></script>
 </body>
 </html>

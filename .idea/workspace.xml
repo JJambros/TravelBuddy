@@ -6,8 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="174b8446-a71e-4127-ae33-0c8f1a088757" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/MainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/MainPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/templates/MainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/templates/MainPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/TripService.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/TripService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/ProviderLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/ProviderLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/ProviderMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/ProviderMain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/ProviderProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/ProviderProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/ProviderSignup.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/ProviderSignup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/ProviderSignupSuccess.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/ProviderSignupSuccess.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/provorders.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/provorders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/provreviews.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/provreviews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/provservices.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/provservices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/provstats.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/provstats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/service-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/service-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/TripService.class" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/TripService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/templates/provider/ProviderMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/templates/provider/ProviderMain.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

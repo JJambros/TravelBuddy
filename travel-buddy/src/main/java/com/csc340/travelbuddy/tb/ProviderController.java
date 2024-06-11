@@ -76,6 +76,7 @@ public class ProviderController {
     @GetMapping("provider/main/{id}/stats")
     public String providerStats(@PathVariable int id, Model model){
         model.addAttribute("provider", providerService.getProviderById(id));
+
         return "provider/provstats";
     }
 

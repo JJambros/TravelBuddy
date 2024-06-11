@@ -9,8 +9,6 @@ import java.util.List;
 public class TripService {
     @Autowired
     private TripRepository tripRepository;
-    @Autowired
-    private ServicesRepository servicesRepository;
 
     public Trip createTrip(Trip trip) {
         return tripRepository.save(trip);
