@@ -14,6 +14,8 @@ public class TripController {
     private TripService tripService;
     @Autowired
     private CustomerService customerService;
+    @Autowired
+    private ServicesService servicesService;
 
     @PostMapping
     public Trip createTrip(@RequestBody Trip trip) {
@@ -29,14 +31,24 @@ public class TripController {
     public Trip getTripById(@PathVariable int id) {
         return tripService.getTripById(id);
     }
+
     @PostMapping("/book-trip")
     public String bookTrip(@RequestParam int customerId, @RequestParam int tripId, Model model) {
-        Trip trip = tripService.getTripById(tripId);
-        Customer customer = customerService.getCustomerById(customerId).orElseThrow();
-
-        model.addAttribute("trip", trip);
-        model.addAttribute("customer", customer);
-
+        Optional<Services> serviceOptional = servicesService.findById(tripId);
+        if (serviceOptional.isPresent()) {
+            Services service = serviceOptional.get();
+            Trip trip = new Trip();
+            trip.setPrice(service.getPrice());
+            trip.setDestination(service.getLocation());
+            trip.setCity(service.getCity());
+            trip.setSpecialFlag(service.isSpecials());
+            trip.setDeparture(service.getDeparture());
+            trip.setDepartureDate(service.getDeparturedate());
+            trip.setReturnDate(service.getReturndate());
+            trip.setProviderid(service.getProviderid());
+            trip.setCustomerId(customerId);
+            tripService.createTrip(trip);
+            model.addAttribute("trip", trip);
+        }
         return "Payment";
     }
-}
