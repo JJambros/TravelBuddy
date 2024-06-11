@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="174b8446-a71e-4127-ae33-0c8f1a088757" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/TripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/TripController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/TripRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/TripRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/MainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/MainPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/book-trip.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/book-trip.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/TripController.class" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/TripController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/templates/MainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/templates/MainPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/templates/book-trip.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/templates/book-trip.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/Profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/Profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -13,12 +13,6 @@ public class TripController {
     @Autowired
     private TripService tripService;
 
-    @GetMapping("/book-trip")
-    public String bookTrip(@RequestParam("country") String country, Model model){
-        model.addAttribute("country", country);
-        return "book-trip";
-    }
-
     @PostMapping
     public Trip createTrip(@RequestBody Trip trip) {
         return tripService.createTrip(trip);
