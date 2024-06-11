@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -70,11 +69,13 @@ public class CustomerController {
         customerService.deleteCustomer(id);
         return "redirect:/customers/index";
     }
+
     @GetMapping("/login")
     public String showLoginForm(Model model) {
         model.addAttribute("customer", new Customer());
         return "login";
     }
+
     @PostMapping("/login")
     public String loginCustomer(@RequestParam String email, @RequestParam String password, Model model) {
         Optional<Customer> customerOpt = customerService.findByEmailAndPassword(email, password);
@@ -86,18 +87,5 @@ public class CustomerController {
             model.addAttribute("error", "Invalid email or password");
             return "login";
         }
-    }
-
-    @GetMapping("/book-trip")
-    public String bookTrip(@RequestParam("country") String country, @RequestParam("id") int id, Model model){
-        List<Services> services = customerService.findServicesByCountry(country);
-        model.addAttribute("country", country);
-        model.addAttribute("services", services);
-        Optional<Customer> customer = customerService.getCustomerById(id);
-        if (customer.isPresent()) {
-            model.addAttribute("customer", customer.get());
-            return "book-trip";
-        }
-        return "book-trip";
     }
 }

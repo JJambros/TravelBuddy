@@ -76,7 +76,6 @@ public class ProviderController {
     @GetMapping("provider/main/{id}/stats")
     public String providerStats(@PathVariable int id, Model model){
         model.addAttribute("provider", providerService.getProviderById(id));
-
         return "provider/provstats";
     }
 
@@ -139,7 +138,7 @@ public class ProviderController {
 
     @PutMapping("provider/specials/{id}/{specialid}")
     public Object setTripSpecial(@PathVariable int id, @PathVariable int specialid){
-        return providerService.setTripSpecial(specialid, tripService.getTripById(id));
+        return providerService.setTripSpecial(specialid, tripService.getTripById((int) id));
     }
 
 }

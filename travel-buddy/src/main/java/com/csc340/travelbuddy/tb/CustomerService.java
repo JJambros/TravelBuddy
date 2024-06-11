@@ -10,8 +10,6 @@ import java.util.Optional;
 public class CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
-    @Autowired
-    private ServicesRepository servicesRepository;
 
     public Customer createCustomer(Customer customer) {
         return customerRepository.save(customer);
@@ -24,7 +22,6 @@ public class CustomerService {
         customer.setEmail(customerDetails.getEmail());
         customer.setPassword(customerDetails.getPassword());
         customer.setMobileNumber(customerDetails.getMobileNumber());
-        customer.setTrips(customerDetails.getTrips()); // Add this line to update trips
         return customerRepository.save(customer);
     }
 
@@ -39,9 +36,8 @@ public class CustomerService {
     public void deleteCustomer(int id) {
         customerRepository.deleteById(id);
     }
+
     public Optional<Customer> findByEmailAndPassword(String email, String password) {
         return customerRepository.findByEmailAndPassword(email, password);
     }
-
-    public List<Services> findServicesByCountry(String country) { return servicesRepository.findByLocation(country); }
 }
