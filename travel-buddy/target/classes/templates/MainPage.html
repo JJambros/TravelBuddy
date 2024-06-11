@@ -158,7 +158,7 @@
     function onEachFeature(feature, layer) {
         if (feature.properties && feature.properties.name) {
             var countryName = feature.properties.name;
-            var popupContent = '<a href="/book-trip?country=' + encodeURIComponent(countryName) + '">Go to ' + countryName + '!</a>';
+            var popupContent = '<a href="/api/trips/book-trip?country=' + encodeURIComponent(countryName) + '">Go to ' + countryName + '!</a>';
             layer.bindPopup(popupContent);
         }
     }
