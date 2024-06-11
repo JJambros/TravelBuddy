@@ -9,6 +9,8 @@ import java.util.List;
 public class TripService {
     @Autowired
     private TripRepository tripRepository;
+    @Autowired
+    private ServicesRepository servicesRepository;
 
     public Trip createTrip(Trip trip) {
         return tripRepository.save(trip);
@@ -25,4 +27,6 @@ public class TripService {
     public List<Trip> getTripsByCountry(String country) {
         return tripRepository.findByDestinationContaining(country);
     }
+
+
 }

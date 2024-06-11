@@ -16,9 +16,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" th:href="@{/}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/home}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" th:href="@{/about}">About</a></li>
-                <li class="nav-item"><a class="nav-link" th:href="@{/login}">Login</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/customers/login}">Login</a></li>
                 <li class="nav-item"><a class="nav-link" th:href="@{/customers/signup}">Sign Up</a></li>
             </ul>
         </div>
@@ -62,7 +62,7 @@
                             <button class="btn btn-primary profile-button" type="submit">Sign Up</button>
                         </div>
                     </form>
-                    <a href="/provider/register">Provider?</a>
+                    <a th:href="@{/provider/register}">Provider?</a>
                 </div>
             </div>
         </div>
