@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="174b8446-a71e-4127-ae33-0c8f1a088757" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/Booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/CustomerController.class" afterDir="false" />
-    </list>
+    <list default="true" id="174b8446-a71e-4127-ae33-0c8f1a088757" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
