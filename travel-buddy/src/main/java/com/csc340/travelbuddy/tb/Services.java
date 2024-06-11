@@ -21,8 +21,9 @@ public class Services {
     private Date departuredate;
     private Date returndate;
     private boolean specials;
+    private String city;
 
-    public Services(int id, @Nonnull String location, int providerid, String departure, int price, Date departuredate, Date returndate, boolean specials) {
+    public Services(int id, @Nonnull String location, int providerid, String departure, int price, Date departuredate, Date returndate, boolean specials, String city) {
         this.id = id;
         this.location = location;
         this.providerid = providerid;
@@ -31,7 +32,9 @@ public class Services {
         this.departuredate = departuredate;
         this.returndate = returndate;
         this.specials = specials;
+        this.city = city;
     }
+
 
     public int getProviderid() {
         return providerid;
@@ -99,5 +102,13 @@ public class Services {
 
     public void setSpecials(boolean specials) {
         this.specials = specials;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }
