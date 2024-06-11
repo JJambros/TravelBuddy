@@ -28,6 +28,7 @@
     </div>
     <div th:each="service : ${services}" class="trip">
         <h2 th:text="${service.departure}"></h2>
+        <p th:text="${service.city}"></p>
         <p th:text="${service.departuredate}"></p>
         <p th:text="${service.returndate}"></p>
         <p>Flight Provider: <span th:text="${service.providerid}"></span></p>
