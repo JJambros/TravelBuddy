@@ -27,19 +27,18 @@ public class ProviderService {
         return providerRepository.findByEmailAndPassword(email, password);
     }
 
-
-
-
-    public Object updateProvider(int id, Provider providerNew) {
-        Provider provider = providerRepository.findById(id).orElseThrow();
-        provider.setName(providerNew.getName());
-        provider.setEmail(providerNew.getEmail());
-        provider.setPassword(providerNew.getPassword());
-        provider.setMobileNumber(providerNew.getMobileNumber());
-        return providerRepository.save(provider);
+    public Provider updateProvider(Provider provider) {
+        providerRepository.save(provider);
+        return provider;
     }
 
     public void deleteProvider(int id) { providerRepository.deleteById(id); }
+
+
+
+
+
+
 
     public List<Review> getProviderReviews(int id, List<Review> reviews) {
         List<Review> providerReviews = new ArrayList<>();
