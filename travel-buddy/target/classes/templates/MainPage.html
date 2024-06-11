@@ -129,7 +129,7 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
 <script>
-    var customerId = /*[[${customer.id}]]*/;
+    var customerId = [[${customer.id}]];
 </script>
 <script>
     // Initialize the map
@@ -161,7 +161,7 @@
     function onEachFeature(feature, layer) {
         if (feature.properties && feature.properties.name) {
             var countryName = feature.properties.name;
-            var popupContent = '<a href="/customers/book-trip?country=' + encodeURIComponent(countryName) + '">Go to ' + countryName + '!</a>';
+            var popupContent = '<a href="/customers/book-trip?country=' + encodeURIComponent(countryName) + '&id=' + encodeURIComponent(customerId) + '">Go to ' + countryName + '!</a>';
             layer.bindPopup(popupContent);
         }
     }

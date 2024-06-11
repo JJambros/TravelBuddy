@@ -98,7 +98,11 @@
         <form action="/services/update-service" method="post">
             <div class="form-floating">
                 <input type="text" class="form-control" id="locationNew" name="location" data-th-value="${service.location}" readonly/>
-                <label for="locationNew">Destination</label>
+                <label for="locationNew">Destination Country</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="city" name="city">
+                <label for="city">Destination City</label>
             </div>
             <div class="form-floating">
                 <input type="text" class="form-control" id="departure" name="departure">
