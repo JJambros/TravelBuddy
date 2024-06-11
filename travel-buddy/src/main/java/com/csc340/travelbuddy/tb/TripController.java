@@ -51,6 +51,9 @@ public class TripController {
             tripService.createTrip(trip);
             model.addAttribute("customerId", customerId);
             model.addAttribute("trip", trip);
+            System.out.println("bookTrip: model = " + model.asMap());
+        } else {
+            System.out.println("Service not found for tripId: " + tripId);
         }
         return "Payment";
     }
