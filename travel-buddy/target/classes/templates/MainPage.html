@@ -88,6 +88,9 @@
         <a th:href="@{/customers/main(id=${customer.id})}">Home</a>
         <a href="#">Destinations</a>
         <a th:href="@{/customers/profile(id=${customer.id})}">Profile</a>
+        <form th:action="@{/customers/logout}" method="post" style="display: inline;">
+            <button type="submit" style="background: none; border: none; color: white; cursor: pointer; padding: 0; margin: 0;">Logout</button>
+        </form>
     </div>
 </div>
 
@@ -103,8 +106,6 @@
 </div>
 
 <div id="map"></div>
-
-
 
 <div class="container">
     <h2 class="section-title">Explore Popular Destinations</h2>

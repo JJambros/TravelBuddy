@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="174b8446-a71e-4127-ae33-0c8f1a088757" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/edit-review.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/list-reviews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b8b87c10-1af7-48b2-ba03-1992d2b07dd9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b8b87c10-1af7-48b2-ba03-1992d2b07dd9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/MainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/MainPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/Profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/Profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/ReviewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/ReviewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/templates/Profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/templates/Profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -100,6 +110,8 @@
       <workItem from="1718129752753" duration="560000" />
       <workItem from="1718130523423" duration="2795000" />
       <workItem from="1718138433975" duration="3005000" />
+      <workItem from="1718150019193" duration="179000" />
+      <workItem from="1718150280339" duration="2818000" />
     </task>
     <servers />
   </component>
