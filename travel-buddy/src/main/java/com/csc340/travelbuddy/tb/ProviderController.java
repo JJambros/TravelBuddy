@@ -91,6 +91,7 @@ public class ProviderController {
     @GetMapping("provider/main/{id}/reviews")
     public String providerReviews(@PathVariable int id, Model model){
         model.addAttribute("provider", providerService.getProviderById(id));
+        model.addAttribute("reviewList", reviewService.getReviewsByProviderId(id));
         return "provider/provreviews";
     }
 
