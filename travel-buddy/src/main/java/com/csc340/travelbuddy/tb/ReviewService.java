@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ReviewService {
@@ -23,6 +24,23 @@ public class ReviewService {
         return reviewRepository.findAll().stream()
                 .filter(review -> review.getTrip().getId() == tripId)
                 .toList();
+    }
+
+    public Optional<Review> getReviewById(int reviewId) {
+        return reviewRepository.findById(reviewId);
+    }
+
+    public List<Review> getReviewsByCustomerId(int customerId) {
+        return reviewRepository.findAll().stream()
+                .filter(review -> review.getCustomer().getId() == customerId)
+                .toList();
+    }
+
+    public Review updateReview(int reviewId, Review reviewDetails) {
+        Review review = reviewRepository.findById(reviewId).orElseThrow(() -> new IllegalArgumentException("Review not found with ID: " + reviewId));
+        review.setComment(reviewDetails.getComment());
+        review.setRating(reviewDetails.getRating());
+        return reviewRepository.save(review);
     }
 
     public List<Review> getReviewsByProviderId(int providerId) {

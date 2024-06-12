@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/reviews")
@@ -34,6 +35,52 @@ public class ReviewController {
         return "redirect:/customers/profile?id=" + customerId;
     }
 
+    @GetMapping("/list")
+    public String listReviews(@RequestParam int customerId, Model model) {
+        List<Review> reviews = reviewService.getReviewsByCustomerId(customerId);
+        model.addAttribute("reviews", reviews);
+        model.addAttribute("customerId", customerId);
+        return "list-reviews";
+    }
+
+    @GetMapping("/edit")
+    public String showEditReviewForm(@RequestParam int reviewId, Model model) {
+        Optional<Review> reviewOpt = reviewService.getReviewById(reviewId);
+        if (reviewOpt.isPresent()) {
+            Review review = reviewOpt.get();
+            model.addAttribute("review", review);
+            model.addAttribute("customerId", review.getCustomer().getId());
+            model.addAttribute("tripId", review.getTrip().getId());
+            return "edit-review";
+        }
+        return "redirect:/reviews/list";
+    }
+
+    @PostMapping("/edit")
+    public String submitEditReview(@ModelAttribute Review review, Model model) {
+        Optional<Review> existingReviewOpt = reviewService.getReviewById(review.getId());
+        if (existingReviewOpt.isPresent()) {
+            Review existingReview = existingReviewOpt.get();
+            existingReview.setComment(review.getComment());
+            existingReview.setRating(review.getRating());
+            reviewService.updateReview(existingReview.getId(), existingReview);
+            return "redirect:/reviews/list?customerId=" + existingReview.getCustomer().getId();
+        }
+        return "redirect:/reviews/list";
+    }
+
+    @PostMapping("/delete")
+    public String deleteReview(@RequestParam int reviewId) {
+        Optional<Review> reviewOpt = reviewService.getReviewById(reviewId);
+        if (reviewOpt.isPresent()) {
+            Review review = reviewOpt.get();
+            int customerId = review.getCustomer().getId();
+            reviewService.deleteReview(reviewId);
+            return "redirect:/reviews/list?customerId=" + customerId;
+        }
+        return "redirect:/reviews/list";
+    }
+
     @GetMapping
     public List<Review> getAllReviews() {
         return reviewService.getAllReviews();
@@ -42,10 +89,5 @@ public class ReviewController {
     @GetMapping("/trip/{tripId}")
     public List<Review> getReviewsByTripId(@PathVariable int tripId) {
         return reviewService.getReviewsByTripId(tripId);
-    }
-
-    @DeleteMapping("/{id}")
-    public void deleteReview(@PathVariable int id) {
-        reviewService.deleteReview(id);
     }
 }
