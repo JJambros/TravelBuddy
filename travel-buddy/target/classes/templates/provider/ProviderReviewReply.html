@@ -90,18 +90,32 @@
         </div>
     </div>
 
-    <div class="flex-fill p-3">
-        <!-- Your content here -->
-        <h1>Reviews</h1>
-    </div>
-    <div class="card" style="width: 18rem;" data-th-each="review: ${reviewList}">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title" th:text="${review.customer.firstName} + ' ' + ${review.customer.lastName}"></h5>
-            <p class="card-text" th:text="'Went to: ' + ${review.trip.city} + ', ' + ${review.trip.destination}"></p>
-            <p class="card-text" th:text="${review.comment}"></p>
-            <p class="card-text" th:text="'Rating: ' + ${review.rating} + '/5'"></p>
-            <a th:href="@{/provider/main/{id}/reviews/response(id=${provider.id}, reviewId=${review.id})}" class="btn btn-primary">Respond</a>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Respond to Review</h4>
+                    </div>
+                    <div class="card-header">
+                        <p class="card-text" th:text="${review.customer.firstName} + ' ' + ${review.customer.lastName}"></p><br>
+                        <p class="card-text" th:text="${review.comment}"></p>
+                    </div>
+                    <div class="card-body">
+                        <form action="/response" method="post">
+                            <div class="form-group">
+                                <label for="response">Response</label>
+                                <textarea id="response" name="response" class="form-control" rows="5"></textarea>
+                                <input type="hidden" name="reviewId" data-th-value="${review.id}">
+                                <input type="hidden" name="providerId" data-th-value="${provider.id}">
+                            </div>
+                            <div class="form-group mt-3">
+                                <button type="submit" class="btn btn-primary">Submit Response</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

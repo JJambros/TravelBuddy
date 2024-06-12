@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="174b8446-a71e-4127-ae33-0c8f1a088757" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/ResponseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/ResponseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/ResponseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/ProviderReviewReply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b8b87c10-1af7-48b2-ba03-1992d2b07dd9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b8b87c10-1af7-48b2-ba03-1992d2b07dd9.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/MainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/MainPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/Profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/Profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/TripController.class" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/TripController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/templates/MainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/templates/MainPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/templates/Payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/templates/Payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/templates/Profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/templates/Profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/ProviderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/java/com/csc340/travelbuddy/tb/ProviderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/provreviews.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/src/main/resources/templates/provider/provreviews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/ProviderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/ProviderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/com/csc340/travelbuddy/tb/ReviewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-buddy/target/classes/templates/provider/provreviews.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-buddy/target/classes/templates/provider/provreviews.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -104,6 +109,7 @@
       <workItem from="1718033571042" duration="101000" />
       <workItem from="1718045192438" duration="22502000" />
       <workItem from="1718116102776" duration="9071000" />
+      <workItem from="1718195601673" duration="4956000" />
     </task>
     <servers />
   </component>

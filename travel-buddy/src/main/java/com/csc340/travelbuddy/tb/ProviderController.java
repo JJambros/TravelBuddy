@@ -95,6 +95,20 @@ public class ProviderController {
         return "provider/provreviews";
     }
 
+    @GetMapping("provider/main/{id}/reviews/response")
+    public String providerReviewReply(@PathVariable int id, @RequestParam int reviewId, Model model){
+        model.addAttribute("provider", providerService.getProviderById(id));
+        Optional<Review> reviewOpt = reviewService.getReviewById(reviewId);
+        if (reviewOpt.isPresent()) {
+            Review review = reviewOpt.get();
+            model.addAttribute("review", review);
+            return "provider/ProviderReviewReply";
+        } else {
+            model.addAttribute("error", "Invalid review");
+            return "provider/ProviderLogin";
+        }
+    }
+
     @GetMapping("provider/main/{id}/profile")
     public String showProviderProfile(@PathVariable int id, Model model){
         model.addAttribute("provider", providerService.getProviderById(id));
@@ -118,31 +132,5 @@ public class ProviderController {
 
 
 
-
-
-
-
-
-
-
-    @GetMapping("provider/reviews/{id}")
-    public List<Review> getProviderReviews(@PathVariable int id) {
-        return providerService.getProviderReviews(id, reviewService.getAllReviews());
-    }
-
-    @PutMapping("provider/reviews/{id}")
-    public Object replyReview(@PathVariable int id, @RequestBody Review review) {
-        return providerService.replyReview(id, review);
-    }
-
-    @GetMapping("provider/stats")
-    public String getCustomerStats(){
-        return providerService.getCustomerStats(customerService.getAllCustomers());
-    }
-
-    @PutMapping("provider/specials/{id}/{specialid}")
-    public Object setTripSpecial(@PathVariable int id, @PathVariable int specialid){
-        return providerService.setTripSpecial(specialid, tripService.getTripById((int) id));
-    }
 
 }

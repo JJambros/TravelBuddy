@@ -97,10 +97,11 @@
     <div class="card" style="width: 18rem;" data-th-each="review: ${reviewList}">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Bobby Jim</h5>
+            <h5 class="card-title" th:text="${review.customer.firstName} + ' ' + ${review.customer.lastName}"></h5>
+            <p class="card-text" th:text="'Went to: ' + ${review.trip.city} + ', ' + ${review.trip.destination}"></p>
             <p class="card-text" th:text="${review.comment}"></p>
-            <p class="card-text" th:text="${review.rating} + '/5'"></p>
-            <a href="#" class="btn btn-primary">Respond</a>
+            <p class="card-text" th:text="'Rating: ' + ${review.rating} + '/5'"></p>
+            <a th:href="@{/provider/main/{id}/reviews/response(id=${provider.id}, reviewId=${review.id})}" class="btn btn-primary">Respond</a>
         </div>
     </div>
 
